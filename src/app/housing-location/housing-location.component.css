@@ -1,0 +1,68 @@
+/* Styling for the housing listing card */
+.listing {
+  background: var(--accent-color); /* Accent color for the card background */
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden; /* Prevents overflowing of image or content */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+  margin-bottom: 20px; /* Space between cards */
+}
+
+/* Hover effect for the entire card */
+.listing:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow effect */
+}
+
+/* Styling for the listing heading (property name) */
+.listing-heading {
+  color: var(--primary-color); /* Primary color for heading */
+  font-size: 1.5rem; /* Larger font size */
+  font-weight: 600; /* Bold font */
+  padding: 15px 20px 5px 20px; /* Spacing around the heading */
+}
+
+/* Styling for the listing photo (property image) */
+.listing-photo {
+  height: 250px; /* Fixed height */
+  width: 100%; /* Full width */
+  object-fit: cover; /* Keep aspect ratio, fill the space */
+  border-radius: 20px 20px 0 0; /* Rounded corners on the top */
+}
+
+/* Styling for the location text */
+.listing-location {
+  color: var(--secondary-color); /* Use secondary color for the location text */
+  font-size: 1rem; /* Slightly smaller font size */
+  padding: 5px 20px 15px 20px; /* Space around the text */
+  display: flex; /* Align icon and text horizontally */
+  align-items: center; /* Vertically center the content */
+}
+
+/* Add the location pin icon before the location text */
+.listing-location::before {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Styling for the link inside the card */
+section.listing a {
+  display: inline-block; /* Allows padding to take effect */
+  padding-left: 20px; /* Space from the left edge */
+  text-decoration: none; /* Remove underline */
+  color: var(--primary-color); /* Primary color for the link */
+  font-weight: 500; /* Slightly bolder text */
+  font-size: 1.1rem; /* Adjust the font size for the link */
+  transition: color 0.2s ease; /* Smooth color transition on hover */
+}
+
+/* Arrow added after the link text */
+section.listing a::after {
+  content: "\203A"; /* Right arrow symbol */
+  margin-left: 8px; /* Space between link text and arrow */
+  font-size: 1.2rem; /* Make the arrow slightly larger */
+}
+
+/* Hover effect for the link */
+section.listing a:hover {
+  color: var(--highlight-color); /* Change color on hover */
+}
